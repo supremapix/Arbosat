@@ -31,12 +31,12 @@ export default function AboutUs() {
             </div>
 
             {/* Major description statement in deep brand teal */}
-            <p className="text-lg sm:text-xl font-bold text-brand-teal leading-relaxed">
-              Atendemos particulares, condomínios e empresas em toda Curitiba, região metropolitana, campos gerais e litoral.
+            <p className="text-lg sm:text-xl font-extrabold text-[#01423a] leading-relaxed">
+              A Arbosat une técnica e segurança para cuidar do seu patrimônio.
             </p>
 
-            <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">
-              A Arbosat cortes e podas de árvores é uma empresa com grande experiência na prestação de serviços. Atuamos with extrema responsabilidade socioambiental, munidos de equipamentos profissionais de última geração que garantem a segurança da equipe de campo e a tranquilidade incomparável dos nossos clientes cotidianos.
+            <p className="text-neutral-700 text-base leading-relaxed font-semibold">
+              Com uma equipe experiente e equipamentos de ponta, realizamos desde podas preventivas até remoções complexas, sempre focando na agilidade e no cumprimento rigoroso das normas de segurança do trabalho. Levamos nossa estrutura completa até o seu local.
             </p>
 
             {/* Certifications Block */}

@@ -77,7 +77,7 @@ export default function Footer() {
                   ARBOSAT
                 </h4>
                 <p className="text-xs text-neutral-400 leading-relaxed font-semibold">
-                  Sediados no Pinheirinho, atendemos chamados residenciais, comerciais e industriais de manejo arbóreo e plantio de gramas em Curitiba e RMC. Equipamentos pesados e licenças ambientais para qualquer complexidade.
+                  Sediados no Pinheirinho, atendemos chamados residenciais, comerciais e industriais de manejo arbóreo, corte, poda e segurança de árvores em Curitiba, Região Metropolitana e Litoral. Equipamentos pesados e equipe certificada para qualquer complexidade.
                 </p>
               </div>
             </div>

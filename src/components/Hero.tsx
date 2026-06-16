@@ -93,16 +93,15 @@ export default function Hero({ onSelectBairro }: HeroProps) {
               Equipe Qualificada & Autorizada Curitiba
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight sm:leading-none">
-              Poda Técnica e <br />
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight sm:leading-none">
+              Especialistas em <br />
               <span className="text-brand-lime">
-                Corte Seguro de Árvores
-              </span> <br />
-              com Preço Justo
+                Corte, Poda e Segurança de Árvores
+              </span>
             </h1>
 
-            <p className="text-neutral-100 text-sm sm:text-base md:text-md max-w-xl leading-relaxed font-medium">
-              Especialistas em remoção e corte de árvores de pequeno, médio e grande porte em Curitiba e RMC. Equipe equipada para situações de alto risco, galhos em fiação e telhados com laudos técnicos ambientais.
+            <p className="text-neutral-100 text-base sm:text-lg max-w-xl leading-relaxed font-bold">
+              Equipe certificada (NR-35 e NR-12) com sistema de acesso por cordas (rapel) para serviços em áreas de risco e difícil acesso.
             </p>
 
             {/* 2. Custom "SERVIÇOS DE PODA E CORTE" card exactly matching the reference image */}
@@ -150,17 +149,17 @@ export default function Hero({ onSelectBairro }: HeroProps) {
                   <span className="text-base font-black tracking-wide text-neutral-900 leading-none">(41) 99910-7517</span>
                 </a>
                 <a
-                  href="https://wa.me/5541999107517?text=Olá,%20gostaria%20de%20enviar%20uma%20foto%20para%20orçamento%20de%20poda"
+                  href="https://wa.me/5541999107517?text=Olá%20Arbosat,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20serviço%20de%20poda%20ou%20corte"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex flex-col items-center justify-center text-center gap-1 py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white shadow-md transition-all hover:scale-[1.01] whitespace-normal break-words"
-                  title="Enviar fotos no WhatsApp"
+                  className="w-full flex flex-col items-center justify-center text-center gap-1.5 py-4 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white shadow-md transition-all hover:scale-[1.01] whitespace-normal break-words animate-pulse"
+                  title="Solicitar Orçamento via WhatsApp"
                 >
                   <span className="flex items-center gap-1.5 font-black text-xs uppercase tracking-wider">
                     <MessageSquare className="w-4 h-4 shrink-0 fill-white/10" />
-                    Mandar Foto pelo
+                    Entre em Contato Online
                   </span>
-                  <span className="text-base font-black tracking-wide leading-none">WhatsApp</span>
+                  <span className="text-sm font-black tracking-wide leading-tight">Solicitar Orçamento via WhatsApp</span>
                 </a>
               </div>
             </div>
