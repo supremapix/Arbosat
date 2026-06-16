@@ -43,7 +43,7 @@ export default function BudgetForm() {
 
 _Enviado através do gerador de orçamentos online da Arbosat._`;
 
-    const whatsappUrl = `https://wa.me/554199107517?text=${encodeURIComponent(formattedMessage)}`;
+    const whatsappUrl = `https://wa.me/5541999107517?text=${encodeURIComponent(formattedMessage)}`;
     
     window.location.href = whatsappUrl;
     setFormSubmitted(true);
@@ -109,7 +109,7 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
               <div>
                 <span className="text-[9px] font-mono text-amber-700 block uppercase font-bold">Plantão de Urgência</span>
                 <p className="text-xs text-amber-900 mt-0.5 font-bold">
-                  Árvore caída na fiação ou telhado bloqueando portão? Chame direto pelo telefone <strong>(41) 9910-7517</strong> para emergências rápidas.
+                  Árvore caída na fiação ou telhado bloqueando portão? Chame direto pelo telefone <strong>(41) 99910-7517</strong> para emergências rápidas.
                 </p>
               </div>
             </div>
@@ -169,7 +169,7 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
                       id="phone-input"
                       type="tel"
                       required
-                      placeholder="Ex: (41) 9910-7517"
+                      placeholder="Ex: (41) 99910-7517"
                       className="block w-full pl-9 pr-3 py-2.5 bg-white border border-neutral-200 rounded-xl focus:border-brand-teal focus:outline-none focus:ring-2 focus:ring-brand-teal/10 text-neutral-800 text-xs font-bold"
                       value={formData.phone}
                       onChange={e => setFormData({ ...formData, phone: e.target.value })}

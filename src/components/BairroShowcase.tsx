@@ -99,7 +99,7 @@ export default function BairroShowcase({ selectedBairro }: BairroShowcaseProps) 
       "@type": "LocalBusiness",
       "name": `Arbosat - ${serviceName}`,
       "image": "https://img.arbosat.digital/logo.png",
-      "telephone": "+55 41 9910-7517",
+      "telephone": "+55 41 99910-7517",
       "email": "sac@arbosat.digital",
       "priceRange": "$$",
       "address": {
@@ -241,7 +241,7 @@ export default function BairroShowcase({ selectedBairro }: BairroShowcaseProps) 
             </div>
 
             <a
-              href={`https://wa.me/554199107517?text=${prepWhatsAppMsg()}`}
+              href={`https://wa.me/5541999107517?text=${prepWhatsAppMsg()}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-3 py-4 px-4 rounded-xl bg-brand-teal hover:bg-brand-teal/95 text-white font-black text-base transition-all shadow-md group cursor-pointer whitespace-normal break-words text-center"

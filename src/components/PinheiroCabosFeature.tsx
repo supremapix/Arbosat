@@ -92,7 +92,7 @@ export default function PinheiroCabosFeature() {
             {/* Safety call-to-action - High accessibility typography and wrapping safe buttons */}
             <div className="pt-4 border-t border-neutral-250 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <a
-                href="https://wa.me/554199107517?text=Olá,%20gostaria%20de%20enviar%20uma%20foto%20para%20orçamento%20de%20cabeamento%20de%20galhos%20de%20pinheiro"
+                href="https://wa.me/5541999107517?text=Olá,%20gostaria%20de%20enviar%20uma%20foto%20para%20orçamento%20de%20cabeamento%20de%20galhos%20de%20pinheiro"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center justify-center text-center gap-1.5 py-4 px-6 rounded-2xl bg-[#01423a] hover:bg-[#002f29] text-brand-lime hover:text-white shadow-lg transition-all active:scale-[0.99] whitespace-normal break-words cursor-pointer border-2 border-brand-teal"

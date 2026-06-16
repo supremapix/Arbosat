@@ -73,7 +73,7 @@ export default function Header({ isLargeFont = false, onToggleLargeFont }: Heade
               ATENDEMOS Curitiba e Região Metropolitana
             </span>
             <span className="text-[11px] flex items-center gap-1">
-              FALE CONOSCO: <a href="https://wa.me/554199107517" className="text-brand-lime underline hover:text-white transition-colors font-extrabold">(41) 9910-7517</a>
+              FALE CONOSCO: <a href="https://wa.me/5541999107517" className="text-brand-lime underline hover:text-white transition-colors font-extrabold">(41) 99910-7517</a>
             </span>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function Header({ isLargeFont = false, onToggleLargeFont }: Heade
 
       {/* Mobile-only thin top info indicator */}
       <div className="md:hidden bg-brand-teal text-white py-2 px-4 text-center text-[10px] font-bold border-b border-brand-lime/30">
-        <span>ATENDEMOS CURITIBA & RMC • WHATSAPP: <strong>(41) 9910-7517</strong></span>
+        <span>ATENDEMOS CURITIBA & RMC • WHATSAPP: <strong>(41) 99910-7517</strong></span>
       </div>
 
       {/* 2. Main Navigation Bar with JM PODAS style elements */}
@@ -151,17 +151,17 @@ export default function Header({ isLargeFont = false, onToggleLargeFont }: Heade
           </button>
 
           <a
-            href="https://wa.me/554199107517?text=Olá%20Arbosat,%20gostaria%20de%20solicitar%20um%2520orçamento"
+            href="https://wa.me/5541999107517?text=Olá%20Arbosat,%20gostaria%20de%20solicitar%20um%2520orçamento"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex flex-col items-start justify-center px-4 py-2 rounded-xl bg-brand-teal hover:bg-brand-teal/95 text-white transition-all shadow-sm leading-tight text-left min-w-[200px]"
-            title="Enviar mensagem no WhatsApp para (41) 9910-7517"
+            title="Enviar mensagem no WhatsApp para (41) 99910-7517"
           >
             <span className="flex items-center gap-1 font-black text-[10px] tracking-widest uppercase text-brand-lime">
               <MessageSquare className="w-3 h-3 fill-white/10 shrink-0" />
               WhatsApp Atendimento
             </span>
-            <span className="text-sm font-black tracking-wide">(41) 9910-7517</span>
+            <span className="text-sm font-black tracking-wide">(41) 99910-7517</span>
           </a>
         </div>
 
@@ -228,7 +228,7 @@ export default function Header({ isLargeFont = false, onToggleLargeFont }: Heade
               </span>
               
               <a
-                href="https://wa.me/554199107517?text=Olá%20Arbosat,%20gostaria%20de%20solicitar%20um%2520orçamento%20para%20poda%20ou%20corte"
+                href="https://wa.me/5541999107517?text=Olá%20Arbosat,%20gostaria%20de%20solicitar%20um%2520orçamento%20para%20poda%20ou%20corte"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-3.5 py-3.5 px-4 rounded-2xl bg-brand-teal hover:bg-brand-teal/95 text-white shadow-md transition-all whitespace-normal break-words"
@@ -236,18 +236,18 @@ export default function Header({ isLargeFont = false, onToggleLargeFont }: Heade
                 <MessageSquare className="w-7 h-7 text-brand-lime fill-white/10 shrink-0" />
                 <div className="text-left font-black flex-1">
                   <span className="text-[10px] font-mono text-brand-lime uppercase block font-black tracking-wider leading-tight">TOQUE PARA WHATSAPP</span>
-                  <span className="text-lg font-black leading-none">(41) 9910-7517</span>
+                  <span className="text-lg font-black leading-none">(41) 99910-7517</span>
                 </div>
               </a>
 
               <a
-                href="tel:+554199107517"
+                href="tel:+5541999107517"
                 className="w-full flex items-center justify-center gap-3.5 py-3.5 px-4 rounded-2xl bg-[#01423a] text-brand-lime border-2 border-brand-teal shadow-md transition-all whitespace-normal break-words"
               >
                 <Phone className="w-6 h-6 text-[#b4d423] shrink-0 stroke-[3]" />
                 <div className="text-left font-black flex-1">
                   <span className="text-[10px] font-mono text-brand-lime uppercase block font-black tracking-wider leading-tight">TOQUE PARA LIGAR GRÁTIS</span>
-                  <span className="text-lg font-black leading-none text-white">(41) 9910-7517</span>
+                  <span className="text-lg font-black leading-none text-white">(41) 99910-7517</span>
                 </div>
               </a>
             </div>

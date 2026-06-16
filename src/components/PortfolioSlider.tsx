@@ -121,7 +121,7 @@ export default function PortfolioSlider() {
         {/* Quick estimate call to action */}
         <div className="mt-10 flex justify-center">
           <a
-            href="https://wa.me/554199107517?text=Olá Arbosat, gostei do portfólio de vocês e gostaria de fazer uma cotação"
+            href="https://wa.me/5541999107517?text=Olá Arbosat, gostei do portfólio de vocês e gostaria de fazer uma cotação"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-brand-lime hover:bg-white text-brand-teal font-black text-sm rounded-xl transition-all shadow-lg shadow-brand-teal/20 max-w-full text-center whitespace-normal break-words"

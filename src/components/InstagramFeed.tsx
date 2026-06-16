@@ -56,7 +56,7 @@ export default function InstagramFeed() {
             <span>Seguir no Instagram</span>
           </a>
           <a
-            href="https://wa.me/554199107517?text=Olá%20Arbosat,%20vi%20o%20trabalho%20de%20vocês%20no%20Instagram%20e%20gostaria%20de%2520um%20orçamento"
+            href="https://wa.me/5541999107517?text=Olá%20Arbosat,%20vi%20o%20trabalho%20de%20vocês%20no%20Instagram%20e%20gostaria%20de%2520um%20orçamento"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 group text-sm font-black text-neutral-700 hover:text-neutral-900 transition-colors max-w-full text-center whitespace-normal break-words"

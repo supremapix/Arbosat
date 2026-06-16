@@ -76,7 +76,7 @@ export default function App() {
           "alternateName": "Arbosat Engenharia de Arborização Curitiba",
           "image": "https://img.arbosat.digital/logo.png",
           "description": selectedBairro.seoDescription,
-          "telephone": "+55-41-9910-7517",
+          "telephone": "+55-41-99910-7517",
           "priceRange": "$$",
           "address": {
             "@type": "PostalAddress",
@@ -111,7 +111,7 @@ export default function App() {
           },
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+55-41-9910-7517",
+            "telephone": "+55-41-99910-7517",
             "contactType": "customer service"
           }
         };

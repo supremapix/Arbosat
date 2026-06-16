@@ -139,18 +139,18 @@ export default function Hero({ onSelectBairro }: HeroProps) {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 <a
-                  href="tel:+554199107517"
+                  href="tel:+5541999107517"
                   className="w-full flex flex-col items-center justify-center text-center gap-1 py-3 px-3 rounded-xl bg-brand-lime hover:bg-brand-lime/95 text-brand-teal shadow-md transition-all hover:scale-[1.01] whitespace-normal break-words"
-                  title="Ligar para Telefone Central (41) 9910-7517"
+                  title="Ligar para Telefone Central (41) 99910-7517"
                 >
                   <span className="flex items-center gap-1.5 font-black text-xs uppercase tracking-wider text-[#01423a]">
                     <Phone className="w-4 h-4 shrink-0 stroke-[3]" />
                     Telefone Central
                   </span>
-                  <span className="text-base font-black tracking-wide text-neutral-900 leading-none">(41) 9910-7517</span>
+                  <span className="text-base font-black tracking-wide text-neutral-900 leading-none">(41) 99910-7517</span>
                 </a>
                 <a
-                  href="https://wa.me/554199107517?text=Olá,%20gostaria%20de%20enviar%20uma%20foto%20para%20orçamento%20de%20poda"
+                  href="https://wa.me/5541999107517?text=Olá,%20gostaria%20de%20enviar%20uma%20foto%20para%20orçamento%20de%20poda"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex flex-col items-center justify-center text-center gap-1 py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white shadow-md transition-all hover:scale-[1.01] whitespace-normal break-words"
