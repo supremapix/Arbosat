@@ -4,10 +4,8 @@
  */
 
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
 import {
-  MessageSquare, FileText, Send, CheckCircle2,
-  AlertOctagon, HelpCircle, User, Phone, MapPin, ClipboardList, AlertTriangle
+  Send, CheckCircle2, AlertOctagon, User, Phone, MapPin, ClipboardList, AlertTriangle, Leaf, Trees, Zap
 } from 'lucide-react';
 import { BAIRROS_DATA, SERVICE_DETAILS } from '../data/bairros';
 import { ServiceType } from '../types';
@@ -27,11 +25,9 @@ export default function BudgetForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Find the neighborhood info
     const selectedBairro = BAIRROS_DATA.find(b => b.id === formData.bairroId) || BAIRROS_DATA[0];
     const serviceName = SERVICE_DETAILS.find(s => s.id === formData.serviceType)?.title || formData.serviceType;
 
-    // Build the formatted WhatsApp message
     const formattedMessage = 
 `*SOLICITAÇÃO DE ORÇAMENTO - ARBOSAT* 🌳
 
@@ -47,30 +43,27 @@ export default function BudgetForm() {
 
 _Enviado através do gerador de orçamentos online da Arbosat._`;
 
-    // Encode string
     const whatsappUrl = `https://wa.me/554199107517?text=${encodeURIComponent(formattedMessage)}`;
     
-    // Redirect
     window.location.href = whatsappUrl;
-    
     setFormSubmitted(true);
   };
 
   return (
-    <section id="contato-orcamento" className="py-24 bg-white border-t border-neutral-100 overflow-hidden relative">
+    <section id="contato-orcamento" className="py-24 bg-white border-t border-neutral-150 overflow-hidden relative font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* FAQ & Information Panel */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-12 xl:col-span-5 space-y-8">
             <div>
-              <span className="text-xs font-mono font-bold text-emerald-850 text-emerald-800 bg-emerald-100 border border-emerald-200 px-3 py-1 rounded-full uppercase">
+              <span className="text-xs font-bold text-brand-teal bg-brand-lime/25 border border-brand-teal/20 px-3 py-1.5 rounded-full uppercase">
                 Avaliação sem Compromisso
               </span>
-              <h2 className="mt-4 text-3xl sm:text-4xl font-sans font-black text-neutral-900 tracking-tight">
+              <h2 className="mt-4 text-3xl sm:text-4xl font-black text-brand-teal tracking-tight">
                 Como Funciona o Nosso Orçamento?
               </h2>
-              <p className="mt-4 text-neutral-600 text-sm leading-relaxed">
+              <p className="mt-4 text-neutral-600 text-sm leading-relaxed font-semibold">
                 Nós facilitamos ao máximo. Você não precisa esperar visitas demoradas para ter uma estimativa inicial. Através de fotos e do preenchimento do formulário ao lado, conseguimos avaliar o nível de perigo e repassar custos preliminares imediatamente.
               </p>
             </div>
@@ -78,32 +71,32 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
             {/* Steps line */}
             <div className="space-y-6">
               <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-neutral-100 border border-neutral-200 flex items-center justify-center shrink-0 font-mono text-xs font-bold text-emerald-650 text-emerald-600">
+                <div className="w-10 h-10 rounded-xl bg-neutral-100 border border-neutral-200 flex items-center justify-center shrink-0 font-mono text-xs font-bold text-brand-teal">
                   1
                 </div>
                 <div>
-                  <h4 className="text-neutral-800 font-bold text-sm font-sans">Preencha os dados e localidade</h4>
-                  <p className="text-xs text-neutral-500 mt-1">Informe seu bairro e detalhes para que estimemos as rotas operacionais de nossa equipe.</p>
+                  <h4 className="text-neutral-800 font-extrabold text-sm">Preencha os dados e localidade</h4>
+                  <p className="text-xs text-neutral-500 mt-1 font-semibold">Informe seu bairro e detalhes para que estimemos as rotas operacionais de nossa equipe.</p>
                 </div>
               </div>
 
               <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-neutral-100 border border-neutral-200 flex items-center justify-center shrink-0 font-mono text-xs font-bold text-emerald-650 text-emerald-600">
+                <div className="w-10 h-10 rounded-xl bg-neutral-100 border border-neutral-200 flex items-center justify-center shrink-0 font-mono text-xs font-bold text-brand-teal">
                   2
                 </div>
                 <div>
-                  <h4 className="text-neutral-800 font-bold text-sm font-sans">Conte o que está acontecendo</h4>
-                  <p className="text-xs text-neutral-500 mt-1">Tamanho aproximado da árvore, proximidade com redes elétricas, ou se há perigo agudo de tombamento.</p>
+                  <h4 className="text-neutral-800 font-extrabold text-sm">Conte o que está acontecendo</h4>
+                  <p className="text-xs text-neutral-500 mt-1 font-semibold">Tamanho aproximado da árvore, proximidade com redes elétricas, ou se há perigo agudo de tombamento.</p>
                 </div>
               </div>
 
               <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-neutral-100 border border-neutral-200 flex items-center justify-center shrink-0 font-mono text-xs font-bold text-emerald-650 text-emerald-600">
+                <div className="w-10 h-10 rounded-xl bg-neutral-100 border border-neutral-200 flex items-center justify-center shrink-0 font-mono text-xs font-bold text-brand-teal">
                   3
                 </div>
                 <div>
-                  <h4 className="text-neutral-800 font-bold text-sm font-sans">Clique para enviar para o WhatsApp</h4>
-                  <p className="text-xs text-neutral-500 mt-1">Sua solicitação é formatada automaticamente. Envie também fotos do local no bate-papo para que o analista passe o preço na hora!</p>
+                  <h4 className="text-neutral-800 font-extrabold text-sm">Clique para enviar para o WhatsApp</h4>
+                  <p className="text-xs text-neutral-500 mt-1 font-semibold">Sua solicitação é formatada automaticamente. Envie também fotos do local no bate-papo para que o analista passe o preço na hora!</p>
                 </div>
               </div>
             </div>
@@ -115,7 +108,7 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
               </div>
               <div>
                 <span className="text-[9px] font-mono text-amber-700 block uppercase font-bold">Plantão de Urgência</span>
-                <p className="text-xs text-amber-900 font-sans mt-0.5">
+                <p className="text-xs text-amber-900 mt-0.5 font-bold">
                   Árvore caída na fiação ou telhado bloqueando portão? Chame direto pelo telefone <strong>(41) 9910-7517</strong> para emergências rápidas.
                 </p>
               </div>
@@ -123,19 +116,19 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
           </div>
 
           {/* Interactive Lead Input Form */}
-          <div className="lg:col-span-7 bg-neutral-50 border border-neutral-200 p-6 sm:p-8 rounded-3xl shadow-sm relative">
-            <div className="absolute top-4 right-4 text-[9px] font-mono uppercase bg-white text-emerald-700 border border-neutral-200 shadow-xs px-2 py-0.5 rounded">
+          <div className="lg:col-span-12 xl:col-span-7 bg-[#fafbfa] border border-neutral-200 p-6 sm:p-8 rounded-3xl shadow-sm relative">
+            <div className="absolute top-4 right-4 text-[9px] font-mono uppercase bg-white text-brand-teal border border-neutral-200 shadow-xs px-2 py-0.5 rounded font-black">
               🔒 SSL Protegido
             </div>
 
             <div className="flex items-center gap-2.5 mb-6 border-b border-neutral-200 pb-4">
-              <ClipboardList className="w-5 h-5 text-emerald-600" />
+              <ClipboardList className="w-5 h-5 text-brand-teal" />
               <div>
-                <h3 className="text-neutral-800 font-extrabold text-lg sm:text-xl font-sans">
+                <h3 className="text-neutral-900 font-extrabold text-lg sm:text-xl">
                   Orçamento Online Instantâneo
                 </h3>
-                <p className="text-[11px] text-neutral-500 font-mono">
-                  Envia diretamente de forma segura para o WhatsApp de atendimento
+                <p className="text-[11px] text-neutral-500 font-mono font-bold uppercase mt-0.5">
+                  Envia de forma direta para o WhatsApp de atendimento
                 </p>
               </div>
             </div>
@@ -144,7 +137,7 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Nome */}
                 <div className="space-y-1.5">
-                  <label htmlFor="name-input" className="text-xs font-mono text-neutral-600 block font-semibold">
+                  <label htmlFor="name-input" className="text-xs font-mono text-neutral-600 block font-bold uppercase">
                     Seu Nome Completo
                   </label>
                   <div className="relative">
@@ -156,7 +149,7 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
                       type="text"
                       required
                       placeholder="Ex: João da Silva"
-                      className="block w-full pl-9 pr-3 py-2.5 bg-white border border-neutral-200 rounded-xl focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/10 text-neutral-800 text-xs"
+                      className="block w-full pl-9 pr-3 py-2.5 bg-white border border-neutral-200 rounded-xl focus:border-brand-teal focus:outline-none focus:ring-2 focus:ring-brand-teal/10 text-neutral-800 text-xs font-bold"
                       value={formData.name}
                       onChange={e => setFormData({ ...formData, name: e.target.value })}
                     />
@@ -165,7 +158,7 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
 
                 {/* Telefone */}
                 <div className="space-y-1.5">
-                  <label htmlFor="phone-input" className="text-xs font-mono text-neutral-600 block font-semibold">
+                  <label htmlFor="phone-input" className="text-xs font-mono text-neutral-600 block font-bold uppercase">
                     Seu Número de WhatsApp
                   </label>
                   <div className="relative">
@@ -177,7 +170,7 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
                       type="tel"
                       required
                       placeholder="Ex: (41) 9910-7517"
-                      className="block w-full pl-9 pr-3 py-2.5 bg-white border border-neutral-200 rounded-xl focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/10 text-neutral-800 text-xs"
+                      className="block w-full pl-9 pr-3 py-2.5 bg-white border border-neutral-200 rounded-xl focus:border-brand-teal focus:outline-none focus:ring-2 focus:ring-brand-teal/10 text-neutral-800 text-xs font-bold"
                       value={formData.phone}
                       onChange={e => setFormData({ ...formData, phone: e.target.value })}
                     />
@@ -188,7 +181,7 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Bairro Dropdown Selection */}
                 <div className="space-y-1.5">
-                  <label htmlFor="bairro-select" className="text-xs font-mono text-neutral-600 block font-semibold">
+                  <label htmlFor="bairro-select" className="text-xs font-mono text-neutral-600 block font-bold uppercase">
                     Bairro de Atendimento em Curitiba/RMC
                   </label>
                   <div className="relative">
@@ -197,12 +190,12 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
                     </span>
                     <select
                       id="bairro-select"
-                      className="block w-full pl-9 pr-3 py-2.5 bg-white border border-neutral-200 rounded-xl focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/10 text-neutral-800 text-xs appearance-none cursor-pointer"
+                      className="block w-full pl-9 pr-3 py-2.5 bg-white border border-neutral-200 rounded-xl focus:border-brand-teal focus:outline-none focus:ring-2 focus:ring-brand-teal/10 text-neutral-800 text-xs font-bold appearance-none cursor-pointer"
                       value={formData.bairroId}
                       onChange={e => setFormData({ ...formData, bairroId: e.target.value })}
                     >
                       {BAIRROS_DATA.map(b => (
-                        <option key={b.id} value={b.id} className="text-neutral-805 text-neutral-800 text-xs">
+                        <option key={b.id} value={b.id} className="text-neutral-800 text-xs font-bold">
                           {b.name} ({b.type === 'official' ? 'Bairro' : b.type === 'popular' ? 'Vila' : 'Cidade'})
                         </option>
                       ))}
@@ -212,7 +205,7 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
 
                 {/* Urgência */}
                 <div className="space-y-1.5">
-                  <label htmlFor="urgency-select" className="text-xs font-mono text-neutral-600 block font-semibold">
+                  <label htmlFor="urgency-select" className="text-xs font-mono text-neutral-600 block font-bold uppercase">
                     Nível de Urgência
                   </label>
                   <div className="relative">
@@ -221,13 +214,13 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
                     </span>
                     <select
                       id="urgency-select"
-                      className="block w-full pl-9 pr-3 py-2.5 bg-white border border-neutral-200 rounded-xl focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/10 text-neutral-800 text-xs appearance-none cursor-pointer"
+                      className="block w-full pl-9 pr-3 py-2.5 bg-white border border-neutral-200 rounded-xl focus:border-brand-teal focus:outline-none focus:ring-2 focus:ring-brand-teal/10 text-neutral-800 text-xs font-bold appearance-none cursor-pointer"
                       value={formData.urgency}
                       onChange={e => setFormData({ ...formData, urgency: e.target.value as any })}
                     >
                       <option value="baixa" className="text-neutral-800 text-xs">Baixa (Manutenção de Rotina)</option>
                       <option value="media" className="text-neutral-800 text-xs">Média (Crescimento Excessivo)</option>
-                      <option value="urgente" className="text-amber-700 text-xs font-bold">⚠️ Alta / Emergência (Risco Iminente)</option>
+                      <option value="urgente" className="text-amber-700 text-xs font-bold">Alta / Emergência (Risco Iminente)</option>
                     </select>
                   </div>
                 </div>
@@ -235,25 +228,26 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
 
               {/* Service Type */}
               <div className="space-y-1.5">
-                <span className="text-xs font-mono text-neutral-600 block font-semibold">Serviço Pretendido</span>
+                <span className="text-xs font-mono text-neutral-600 block font-bold uppercase">Serviço Pretendido</span>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {[
-                    { id: 'poda', title: '🍃 Poda' },
-                    { id: 'remocao', title: '🪵 Remoção' },
-                    { id: 'corte', title: '⚡ Corte Caída' },
-                    { id: 'arborizacao', title: '📋 Consultoria' }
+                    { id: 'poda', title: 'Poda', icon: <Leaf className="w-3.5 h-3.5" /> },
+                    { id: 'remocao', title: 'Remoção', icon: <Trees className="w-3.5 h-3.5" /> },
+                    { id: 'corte', title: 'Corte Caída', icon: <Zap className="w-3.5 h-3.5" /> },
+                    { id: 'arborizacao', title: 'Consultoria', icon: <ClipboardList className="w-3.5 h-3.5" /> }
                   ].map((s) => (
                     <button
                       key={s.id}
                       type="button"
                       onClick={() => setFormData({ ...formData, serviceType: s.id as ServiceType })}
-                      className={`py-2 rounded-lg text-center text-xs border font-medium transition-all cursor-pointer ${
+                      className={`py-2 rounded-lg flex items-center justify-center gap-1.5 text-xs border font-bold transition-all cursor-pointer ${
                         formData.serviceType === s.id
-                          ? 'bg-emerald-600 border-emerald-600 text-white font-semibold shadow-sm shadow-emerald-600/15'
+                          ? 'bg-brand-teal border-brand-teal text-white shadow shadow-brand-teal/15 animate-pulse'
                           : 'bg-white border-neutral-200 hover:bg-neutral-50 text-neutral-600'
                       }`}
                     >
-                      {s.title}
+                      {s.icon}
+                      <span>{s.title}</span>
                     </button>
                   ))}
                 </div>
@@ -261,15 +255,15 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
 
               {/* Descrição */}
               <div className="space-y-1.5">
-                <label htmlFor="description-input" className="text-xs font-mono text-neutral-600 block font-semibold">
+                <label htmlFor="description-input" className="text-xs font-mono text-neutral-600 block font-bold uppercase">
                   Instruções ou Descrição do Estado da Árvore
                 </label>
                 <textarea
                   id="description-input"
                   rows={4}
                   required
-                  placeholder="Ex: Tenho um pinheiro de grande porte que está morrendo e ameaçando cair sobre o telhado nas próximas chuvas..."
-                  className="block w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/10 text-neutral-800 text-xs resize-none"
+                  placeholder="Ex: Tenho um pinheiro de grande porte que está ameaçando cair sobre o telhado..."
+                  className="block w-full px-4 py-3 bg-white border border-neutral-200 rounded-xl focus:border-brand-teal focus:outline-none focus:ring-2 focus:ring-brand-teal/10 text-neutral-800 text-xs font-semibold resize-none"
                   value={formData.description}
                   onChange={e => setFormData({ ...formData, description: e.target.value })}
                 />
@@ -279,7 +273,7 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm transition-all shadow-md shadow-emerald-500/15 hover:translate-y-[-1px] cursor-pointer"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-brand-teal hover:bg-brand-teal/95 text-white font-extrabold text-sm transition-all shadow-md cursor-pointer hover:translate-y-[-1px]"
                 >
                   <Send className="w-4 h-4" />
                   Gerar e Enviar Orçamento ao Especialista
@@ -288,8 +282,8 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
             </form>
 
             {formSubmitted && (
-              <div className="mt-4 flex items-center gap-2 p-3 bg-emerald-50 border border-emerald-250 border-emerald-200 rounded-xl text-xs text-emerald-800">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+              <div className="mt-4 flex items-center gap-2 p-3 bg-brand-teal/5 border border-brand-teal/20 rounded-xl text-xs text-brand-teal font-semibold">
+                <CheckCircle2 className="w-5 h-5 text-brand-teal shrink-0" />
                 <span>Roteando sua solicitação para o aplicativo do WhatsApp. Caso não tenha carregado, confirme o envio manualmente.</span>
               </div>
             )}
