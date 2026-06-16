@@ -1,0 +1,10 @@
+{
+  "name": "Arbosat - Corte e Poda de Árvores Curitiba",
+  "description": "Serviços especializados de poda, remoção segura e corte de árvores em todos os bairros de Curitiba e Região Metropolitana. Orçamento online via WhatsApp e estimativas de atendimento em tempo real.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
