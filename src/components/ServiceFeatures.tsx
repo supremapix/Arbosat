@@ -39,22 +39,17 @@ export default function ServiceFeatures() {
             {/* Card 1: Corte e Poda */}
             <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col hover:translate-y-[-2px]">
               {/* Product Photo: Chainsaw work on wood */}
-              <div className="h-52 sm:h-60 w-full overflow-hidden relative">
+              <div className="w-full overflow-hidden relative border-b border-neutral-100">
                 <img 
-                  src="https://img.arbosat.digital/arbosat-corte.png" 
+                  src="https://img.arbosat.digital/servico-pr-br.png" 
                   alt="Trabalhador operando motosserra com segurança para corte de árvore"
-                  className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto block hover:scale-102 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
-                
-                {/* Float Centered circle badge "1" */}
-                <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 w-14 h-14 bg-[#cca107] bg-yellow-500 border-4 border-white rounded-full flex items-center justify-center text-white font-black text-xl shadow-md">
-                  1
-                </div>
               </div>
 
               {/* Card Body */}
-              <div className="p-8 pt-10 text-center flex-1 flex flex-col justify-between">
+              <div className="p-6 sm:p-8 text-center flex-1 flex flex-col justify-between">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-black text-[#89a415] hover:text-brand-teal transition-colors">
                     Corte e Poda
@@ -86,22 +81,17 @@ export default function ServiceFeatures() {
             {/* Card 2: Venda e Plantio de grama */}
             <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col hover:translate-y-[-2px]">
               {/* Product Photo: Sod green grass */}
-              <div className="h-52 sm:h-60 w-full overflow-hidden relative">
+              <div className="w-full overflow-hidden relative border-b border-neutral-100">
                 <img 
-                  src="https://img.arbosat.digital/arbosat-grama.png" 
+                  src="https://img.arbosat.digital/grama.png" 
                   alt="Placas de grama natural verde para venda e plantio"
-                  className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto block hover:scale-102 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
-                
-                {/* Float Centered circle badge "2" */}
-                <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 w-14 h-14 bg-[#cca107] bg-yellow-500 border-4 border-white rounded-full flex items-center justify-center text-white font-black text-xl shadow-md">
-                  2
-                </div>
               </div>
 
               {/* Card Body */}
-              <div className="p-8 pt-10 text-center flex-1 flex flex-col justify-between">
+              <div className="p-6 sm:p-8 text-center flex-1 flex flex-col justify-between">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-black text-[#89a415] hover:text-brand-teal transition-colors">
                     Venda e Plantio de grama

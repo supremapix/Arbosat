@@ -9,6 +9,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
 import ServiceFeatures from './components/ServiceFeatures';
+import PinheiroCabosFeature from './components/PinheiroCabosFeature';
 import BairroShowcase from './components/BairroShowcase';
 import PortfolioSlider from './components/PortfolioSlider';
 import InstagramFeed from './components/InstagramFeed';
@@ -134,6 +135,9 @@ export default function App() {
 
       {/* 3. Specialized services showcasing block */}
       <ServiceFeatures />
+
+      {/* 3.5 Pinheiro Cabling - High Contrast Highlighted Section */}
+      <PinheiroCabosFeature />
 
       {/* 4. Optimized Local SEO Showcase for selected place */}
       <BairroShowcase selectedBairro={selectedBairro} />

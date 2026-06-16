@@ -50,19 +50,19 @@ export default function InstagramFeed() {
             href="https://www.instagram.com/arbosat/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-extrabold text-base px-8 py-4 rounded-xl shadow-md shadow-amber-500/10 transition-all hover:scale-[1.01] w-full sm:w-auto"
+            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-black text-base px-8 py-4 rounded-xl shadow-md shadow-amber-500/10 transition-all hover:scale-[1.01] w-full sm:w-auto max-w-full text-center whitespace-normal break-words"
           >
-            <Instagram className="w-5 h-5 fill-white/10" />
-            Seguir no Instagram
+            <Instagram className="w-5 h-5 fill-white/10 shrink-0" />
+            <span>Seguir no Instagram</span>
           </a>
           <a
-            href="https://wa.me/554199107517?text=Olá%20Arbosat,%20vi%20o%20trabalho%20de%20vocês%20no%20Instagram%20e%20gostaria%20de%20um%20orçamento"
+            href="https://wa.me/554199107517?text=Olá%20Arbosat,%20vi%20o%20trabalho%20de%20vocês%20no%20Instagram%20e%20gostaria%20de%2520um%20orçamento"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 group text-sm font-bold text-neutral-700 hover:text-neutral-900 transition-colors"
+            className="inline-flex items-center justify-center gap-2 group text-sm font-black text-neutral-700 hover:text-neutral-900 transition-colors max-w-full text-center whitespace-normal break-words"
           >
-            Gostou dos projetos? Peça um orçamento igual
-            <Sparkles className="w-4 h-4 text-amber-600 group-hover:translate-x-1 transition-transform" />
+            <span className="leading-tight">Gostou dos projetos? Peça um orçamento igual</span>
+            <Sparkles className="w-4 h-4 text-amber-600 group-hover:translate-x-1 transition-transform shrink-0" />
           </a>
         </div>
 

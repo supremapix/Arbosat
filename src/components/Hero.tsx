@@ -66,7 +66,7 @@ export default function Hero({ onSelectBairro }: HeroProps) {
   };
 
   return (
-    <section id="hero" className="relative min-h-[90vh] lg:min-h-screen pt-[130px] pb-12 flex flex-col justify-center overflow-hidden font-sans">
+    <section id="hero" className="relative min-h-[95vh] lg:min-h-screen pt-[145px] sm:pt-[155px] md:pt-[170px] lg:pt-[140px] xl:pt-[120px] pb-12 flex flex-col justify-center overflow-hidden font-sans">
       
       {/* 1. Full cover background image with tree climber & chainsaw matching the reference image */}
       <div className="absolute inset-0 z-0">

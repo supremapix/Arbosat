@@ -4,8 +4,8 @@
  */
 
 import { useState, useEffect } from 'react';
-import { Phone, Menu, X, MessageSquare, Plus, Minus } from 'lucide-react';
-import { motion } from 'motion/react';
+import { Phone, Menu, X, MessageSquare, Plus, Minus, Home, Info, Sparkles, Image } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 
 interface HeaderProps {
   isLargeFont?: boolean;
@@ -16,7 +16,7 @@ const LogoTree = () => (
   <motion.img 
     src="https://img.arbosat.digital/logo.png" 
     alt="Arbosat Logo" 
-    className="w-16 h-16 min-w-16 min-h-16 md:w-22 md:h-22 md:min-w-22 md:min-h-22 object-contain filter drop-shadow-sm select-none"
+    className="w-14 h-14 min-w-14 min-h-14 sm:w-16 sm:h-16 md:w-26 md:h-26 md:min-w-26 md:min-h-26 object-contain filter drop-shadow-sm select-none"
     referrerPolicy="no-referrer"
     whileHover={{ 
       scale: 1.12, 
@@ -92,7 +92,7 @@ export default function Header({ isLargeFont = false, onToggleLargeFont }: Heade
       </div>
 
       {/* 2. Main Navigation Bar with JM PODAS style elements */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 md:py-3.5 flex items-center justify-between">
         {/* Logo Brand Custom Styled */}
         <div
           onClick={() => scrollToSection('home', 'home')}
@@ -100,10 +100,10 @@ export default function Header({ isLargeFont = false, onToggleLargeFont }: Heade
         >
           <LogoTree />
           <div className="flex flex-col">
-            <span className="text-xl sm:text-2xl font-black tracking-tight text-brand-teal font-sans leading-none flex items-center">
+            <span className="text-2xl sm:text-3xl font-black tracking-tight text-brand-teal font-sans leading-none flex items-center">
               ARBOSAT
             </span>
-            <span className="text-[8.5px] font-bold text-neutral-500 tracking-widest uppercase mt-1 leading-none border-t border-neutral-150 pt-1">
+            <span className="text-[10px] sm:text-xs font-black text-neutral-600 tracking-widest uppercase mt-1 leading-none border-t border-neutral-200 pt-1">
               CORTES E PODAS DE ÁRVORES
             </span>
           </div>
@@ -188,52 +188,72 @@ export default function Header({ isLargeFont = false, onToggleLargeFont }: Heade
       </div>
 
       {/* Mobile Drawer */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b-2 border-brand-teal/25 px-4 pt-4 pb-8 space-y-6 shadow-xl leading-relaxed">
-          <div className="grid grid-cols-1 gap-1.5 pt-2">
-            {[
-              { label: 'Página Inicial (Home)', id: 'home', name: 'home' },
-              { label: 'Quem Somos (Institucional)', id: 'sobre-nos', name: 'institucional' },
-              { label: 'Nossos Serviços', id: 'nossos-servicos-jm', name: 'servicos' },
-              { label: 'Fotos dos Serviços Realizados', id: 'servicos-realizados-slider', name: 'portfolio' },
-              { label: 'Como Falar Conosco', id: 'footer-contato-bar', name: 'contato' },
-            ].map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id, link.name)}
-                className="text-left py-4 px-5 rounded-xl hover:bg-neutral-50 text-neutral-900 hover:text-brand-teal font-extrabold text-base sm:text-lg border-l-4 border-neutral-200 hover:border-brand-lime transition-all flex items-center justify-between gap-3 cursor-pointer whitespace-normal break-words"
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+            className="md:hidden bg-white border-b-2 border-brand-teal/25 px-4 pt-1.5 pb-8 space-y-5 shadow-xl leading-relaxed overflow-hidden"
+          >
+            <div className="grid grid-cols-1 gap-2 pt-2">
+              {[
+                { label: 'Página Inicial (Home)', id: 'home', name: 'home', icon: <Home className="w-5 h-5 text-brand-teal shrink-0" /> },
+                { label: 'Quem Somos (Institucional)', id: 'sobre-nos', name: 'institucional', icon: <Info className="w-5 h-5 text-brand-teal shrink-0" /> },
+                { label: 'Nossos Serviços', id: 'nossos-servicos-jm', name: 'servicos', icon: <Sparkles className="w-5 h-5 text-[#89a415] shrink-0" /> },
+                { label: 'Fotos dos Serviços Realizados', id: 'servicos-realizados-slider', name: 'portfolio', icon: <Image className="w-5 h-5 text-emerald-700 shrink-0" /> },
+                { label: 'Como Falar Conosco', id: 'footer-contato-bar', name: 'contato', icon: <Phone className="w-5 h-5 text-brand-teal shrink-0" /> },
+              ].map((link, idx) => (
+                <motion.button
+                  key={link.id}
+                  initial={{ opacity: 0, x: -15 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: idx * 0.04, ease: 'easeOut' }}
+                  onClick={() => scrollToSection(link.id, link.name)}
+                  className="text-left py-3.5 px-4 rounded-xl hover:bg-neutral-50 text-neutral-900 hover:text-brand-teal font-extrabold text-sm sm:text-base border border-neutral-100 border-l-4 border-l-brand-teal hover:border-l-brand-lime transition-all flex items-center justify-between gap-3 cursor-pointer whitespace-normal break-words"
+                >
+                  <div className="flex items-center gap-3">
+                    {link.icon}
+                    <span className="leading-tight">{link.label}</span>
+                  </div>
+                  <span className="text-[#a4c514] font-black shrink-0 text-xs">▶</span>
+                </motion.button>
+              ))}
+            </div>
+
+            <div className="border-t border-neutral-200 pt-5 px-1 flex flex-col gap-4">
+              <span className="text-xs font-mono font-black text-[#01423a] uppercase tracking-widest text-center block whitespace-normal break-words">
+                📞 ATENDIMENTO DIRETO EM DUAS LINHAS (ALTO CONTRASTE)
+              </span>
+              
+              <a
+                href="https://wa.me/554199107517?text=Olá%20Arbosat,%20gostaria%20de%20solicitar%20um%2520orçamento%20para%20poda%20ou%20corte"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-3.5 py-3.5 px-4 rounded-2xl bg-brand-teal hover:bg-brand-teal/95 text-white shadow-md transition-all whitespace-normal break-words"
               >
-                <span className="leading-tight">{link.label}</span>
-                <span className="text-brand-lime font-black shrink-0">▶</span>
-              </button>
-            ))}
-          </div>
+                <MessageSquare className="w-7 h-7 text-brand-lime fill-white/10 shrink-0" />
+                <div className="text-left font-black flex-1">
+                  <span className="text-[10px] font-mono text-brand-lime uppercase block font-black tracking-wider leading-tight">TOQUE PARA WHATSAPP</span>
+                  <span className="text-lg font-black leading-none">(41) 9910-7517</span>
+                </div>
+              </a>
 
-          <div className="border-t border-neutral-200 pt-5 px-1 flex flex-col gap-4">
-            <span className="text-xs font-mono font-black text-neutral-500 uppercase tracking-widest text-center block whitespace-normal break-words">
-              📞 CONTATO DIRETO DE ALTO CONTRASTE PARA IDOSOS
-            </span>
-            
-            <a
-              href="https://wa.me/554199107517?text=Olá%20Arbosat,%20gostaria%20de%20solicitar%20um%2520orçamento%20para%20poda%20ou%20corte"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-3 py-4 px-4 rounded-2xl bg-brand-teal hover:bg-brand-teal/95 text-white font-extrabold text-base sm:text-lg shadow-md transition-all text-center whitespace-normal break-words"
-            >
-              <MessageSquare className="w-6 h-6 fill-white/10 shrink-0" />
-              <span className="leading-tight">Chamar no WhatsApp</span>
-            </a>
-
-            <a
-              href="tel:+554199107517"
-              className="w-full flex items-center justify-center gap-3 py-4 px-4 rounded-2xl bg-[#002f29] text-[#b4d423] border-2 border-brand-teal font-extrabold text-base sm:text-lg shadow-md transition-all text-center whitespace-normal break-words"
-            >
-              <Phone className="w-5 h-5 fill-[#b4d423] shrink-0" />
-              <span className="leading-tight">Ligar Grátis: (41) 9910-7517</span>
-            </a>
-          </div>
-        </div>
-      )}
+              <a
+                href="tel:+554199107517"
+                className="w-full flex items-center justify-center gap-3.5 py-3.5 px-4 rounded-2xl bg-[#01423a] text-brand-lime border-2 border-brand-teal shadow-md transition-all whitespace-normal break-words"
+              >
+                <Phone className="w-6 h-6 text-[#b4d423] shrink-0 stroke-[3]" />
+                <div className="text-left font-black flex-1">
+                  <span className="text-[10px] font-mono text-brand-lime uppercase block font-black tracking-wider leading-tight">TOQUE PARA LIGAR GRÁTIS</span>
+                  <span className="text-lg font-black leading-none text-white">(41) 9910-7517</span>
+                </div>
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

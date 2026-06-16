@@ -77,7 +77,7 @@ export default function Footer() {
               <img 
                 src="https://img.arbosat.digital/logo.png" 
                 alt="Logo Arbosat" 
-                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-5 filter drop-shadow-md mx-auto md:mx-0 select-none animate-pulse"
+                className="w-44 h-44 md:w-56 md:h-56 object-contain mb-5 filter drop-shadow-md mx-auto md:mx-0 select-none animate-pulse"
                 referrerPolicy="no-referrer"
               />
               <h4 className="text-[#a4c514] font-black uppercase text-sm tracking-widest mb-4">
