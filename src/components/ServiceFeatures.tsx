@@ -14,7 +14,7 @@ export default function ServiceFeatures() {
     {
       title: "Acesso por Cordas (Rapel)",
       description: "Tecnologia de ponta para trabalhar em alturas e locais onde máquinas não chegam.",
-      image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&q=80&w=600",
+      image: "https://img.arbosat.digital/arbosat-cwb-pr-pinheirinho.png",
       badge: "ESPECIALIZADO",
       tags: ["#RapelIndustrial", "#AcessoPorCordas", "#TrabalhoEmAltura"],
       secondaryBadge: "Certificação Completa NR-35"
@@ -30,7 +30,7 @@ export default function ServiceFeatures() {
     {
       title: "Limpeza e Remoção de Resíduos",
       description: "Entregamos o local limpo e organizado após a execução do serviço.",
-      image: "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=600",
+      image: "https://img.arbosat.digital/arbosat-cwb-pr-cic.png",
       badge: "PONTUALIDADE",
       tags: ["#TrituracaoDeGalhos", "#DestinacaoEcologica", "#LocalLimpo"],
       secondaryBadge: "Sustentabilidade Certificada"
