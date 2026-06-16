@@ -137,22 +137,30 @@ export default function Hero({ onSelectBairro }: HeroProps) {
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 <a
                   href="tel:+554199107517"
-                  className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg bg-brand-lime text-brand-teal font-black text-xs sm:text-sm shadow transition-transform hover:scale-[1.01]"
+                  className="w-full flex flex-col items-center justify-center text-center gap-1 py-3 px-3 rounded-xl bg-brand-lime hover:bg-brand-lime/95 text-brand-teal shadow-md transition-all hover:scale-[1.01] whitespace-normal break-words"
+                  title="Ligar para Telefone Central (41) 9910-7517"
                 >
-                  <Phone className="w-4 h-4 shrink-0" />
-                  TELEFONE CENTRAL: (41) 9910-7517
+                  <span className="flex items-center gap-1.5 font-black text-xs uppercase tracking-wider text-[#01423a]">
+                    <Phone className="w-4 h-4 shrink-0 stroke-[3]" />
+                    Telefone Central
+                  </span>
+                  <span className="text-base font-black tracking-wide text-neutral-900 leading-none">(41) 9910-7517</span>
                 </a>
                 <a
-                  href="https://wa.me/554199107517?text=Olá,%20gostaria%20de%20enviar%20um%20foto%20para%20orçamento%20de%20poda"
+                  href="https://wa.me/554199107517?text=Olá,%20gostaria%20de%20enviar%20uma%20foto%20para%20orçamento%20de%20poda"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs sm:text-sm shadow transition-transform hover:scale-[1.01]"
+                  className="w-full flex flex-col items-center justify-center text-center gap-1 py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white shadow-md transition-all hover:scale-[1.01] whitespace-normal break-words"
+                  title="Enviar fotos no WhatsApp"
                 >
-                  <MessageSquare className="w-4 h-4 shrink-0" />
-                  MANDAR FOTO WHATSAPP
+                  <span className="flex items-center gap-1.5 font-black text-xs uppercase tracking-wider">
+                    <MessageSquare className="w-4 h-4 shrink-0 fill-white/10" />
+                    Mandar Foto pelo
+                  </span>
+                  <span className="text-base font-black tracking-wide leading-none">WhatsApp</span>
                 </a>
               </div>
             </div>

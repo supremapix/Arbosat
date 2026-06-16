@@ -98,9 +98,9 @@ export default function BairroShowcase({ selectedBairro }: BairroShowcaseProps) 
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": `Arbosat - ${serviceName}`,
-      "image": "https://img.supremamidia.com/suprema-img.png",
+      "image": "https://img.arbosat.digital/logo.png",
       "telephone": "+55 41 9910-7517",
-      "email": "contato@arbosat.com.br",
+      "email": "sac@arbosat.digital",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -244,10 +244,10 @@ export default function BairroShowcase({ selectedBairro }: BairroShowcaseProps) 
               href={`https://wa.me/554199107517?text=${prepWhatsAppMsg()}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-3 py-4 rounded-xl bg-brand-teal hover:bg-brand-teal/95 text-white font-extrabold text-base transition-all shadow-md group cursor-pointer"
+              className="w-full flex items-center justify-center gap-3 py-4 px-4 rounded-xl bg-brand-teal hover:bg-brand-teal/95 text-white font-black text-base transition-all shadow-md group cursor-pointer whitespace-normal break-words text-center"
             >
-              <MessageSquare className="w-5 h-5 fill-white/10" />
-              Solicitar Corte/Poda no {selectedBairro.name}
+              <MessageSquare className="w-5 h-5 fill-white/10 shrink-0" />
+              <span className="leading-tight">Solicitar Corte/Poda no {selectedBairro.name}</span>
             </a>
           </div>
 

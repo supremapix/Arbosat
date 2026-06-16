@@ -56,13 +56,13 @@ export default function Footer() {
           </a>
 
           <a 
-            href="mailto:contato@arbosat.com.br" 
+            href="mailto:sac@arbosat.digital" 
             className="flex items-center gap-3 hover:text-brand-lime transition-colors group cursor-pointer text-base sm:text-lg lg:text-xl py-2"
           >
             <Mail className="w-6 h-6 text-brand-lime shrink-0" />
             <div className="text-left font-black">
               <span className="text-[10px] font-mono text-brand-lime uppercase block font-black tracking-widest">ENVIAR E-MAIL</span>
-              <span className="underline group-hover:no-underline text-xs sm:text-sm truncate max-w-[180px] block font-extrabold">contato@arbosat.com.br</span>
+              <span className="underline group-hover:no-underline text-xs sm:text-sm truncate max-w-[180px] block font-extrabold">sac@arbosat.digital</span>
             </div>
           </a>
 
@@ -77,7 +77,7 @@ export default function Footer() {
               <img 
                 src="https://img.arbosat.digital/logo.png" 
                 alt="Logo Arbosat" 
-                className="w-20 h-20 object-contain mb-4 filter drop-shadow-md mx-auto md:mx-0 select-none animate-pulse"
+                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-5 filter drop-shadow-md mx-auto md:mx-0 select-none animate-pulse"
                 referrerPolicy="no-referrer"
               />
               <h4 className="text-[#a4c514] font-black uppercase text-sm tracking-widest mb-4">

@@ -240,14 +240,14 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
                       key={s.id}
                       type="button"
                       onClick={() => setFormData({ ...formData, serviceType: s.id as ServiceType })}
-                      className={`py-2 rounded-lg flex items-center justify-center gap-1.5 text-xs border font-bold transition-all cursor-pointer ${
+                      className={`py-2.5 px-1.5 rounded-lg flex flex-col sm:flex-row items-center justify-center gap-1.5 text-xs border font-black transition-all cursor-pointer whitespace-normal break-words text-center ${
                         formData.serviceType === s.id
                           ? 'bg-brand-teal border-brand-teal text-white shadow shadow-brand-teal/15 animate-pulse'
                           : 'bg-white border-neutral-200 hover:bg-neutral-50 text-neutral-600'
                       }`}
                     >
-                      {s.icon}
-                      <span>{s.title}</span>
+                      <span className="shrink-0">{s.icon}</span>
+                      <span className="leading-tight">{s.title}</span>
                     </button>
                   ))}
                 </div>
@@ -273,10 +273,10 @@ _Enviado através do gerador de orçamentos online da Arbosat._`;
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-brand-teal hover:bg-brand-teal/95 text-white font-extrabold text-sm transition-all shadow-md cursor-pointer hover:translate-y-[-1px]"
+                  className="w-full flex items-center justify-center gap-2 py-4 px-4 rounded-xl bg-brand-teal hover:bg-brand-teal/95 text-white font-black text-sm sm:text-base transition-all shadow-md cursor-pointer hover:translate-y-[-1px] whitespace-normal break-words text-center"
                 >
-                  <Send className="w-4 h-4" />
-                  Gerar e Enviar Orçamento ao Especialista
+                  <Send className="w-4 h-4 shrink-0" />
+                  <span className="leading-tight">Gerar e Enviar Orçamento ao Especialista</span>
                 </button>
               </div>
             </form>

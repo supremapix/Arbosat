@@ -73,7 +73,7 @@ export default function App() {
           "@type": "HomeAndConstructionBusiness",
           "name": `Arbosat - Corte e Poda no Bairro ${selectedBairro.name}`,
           "alternateName": "Arbosat Engenharia de Arborização Curitiba",
-          "image": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=800",
+          "image": "https://img.arbosat.digital/logo.png",
           "description": selectedBairro.seoDescription,
           "telephone": "+55-41-9910-7517",
           "priceRange": "$$",
@@ -89,7 +89,7 @@ export default function App() {
             "latitude": selectedBairro.lat,
             "longitude": selectedBairro.lng
           },
-          "url": `https://arbosat.com.br/#bairros-seo`,
+          "url": `https://www.arbosat.digital/#bairros-seo`,
           "areaServed": [
             {
               "@type": "AdministrativeArea",
