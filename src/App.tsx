@@ -23,6 +23,23 @@ export default function App() {
   const defaultBairro = BAIRROS_DATA.find(b => b.name === 'Pinheirinho') || BAIRROS_DATA[0];
   const [selectedBairro, setSelectedBairro] = useState<Neighborhood>(defaultBairro);
   const [isLargeFont, setIsLargeFont] = useState(false);
+  const [countdown, setCountdown] = useState(5);
+
+  useEffect(() => {
+    // Redirection countdown effect
+    const timer = setInterval(() => {
+      setCountdown((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          window.location.href = 'https://www.aloanuncio.com.br';
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     // Adjust root document font-size for global typography scaling
@@ -124,6 +141,61 @@ export default function App() {
 
   return (
     <div className="bg-neutral-50 min-h-screen text-neutral-850 text-neutral-800 selection:bg-brand-teal selection:text-white font-sans antialiased">
+      {/* Dynamic Redirection Overlay Pop-over */}
+      {countdown > 0 && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md select-none transition-all duration-500">
+          <div className="bg-white border-2 border-brand-teal/20 p-8 sm:p-10 rounded-3xl max-w-md w-full shadow-2xl text-center transform scale-100 transition-transform relative">
+            
+            {/* Visual Brand Accent Circles */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[#b4d423] flex items-center justify-center text-brand-teal shadow-lg border-4 border-white animate-bounce">
+              <span className="font-sans font-black text-xl">{countdown}</span>
+            </div>
+
+            <div className="mt-4">
+              <span className="text-[10px] font-mono font-black tracking-widest text-[#01423a] uppercase block mb-2 bg-[#01423a]/5 py-1 px-3 rounded-full w-fit mx-auto">
+                Parceria Arbosat & Alô Anúncio
+              </span>
+              <h3 className="text-2xl font-sans font-black text-[#01423a] tracking-tight leading-snug">
+                Você será redirecionado!
+              </h3>
+              <p className="mt-4 text-neutral-600 text-sm sm:text-base leading-relaxed font-semibold">
+                Em instantes, nosso sistema o enviará de forma segura para o portal parceiro <strong className="text-brand-teal font-extrabold">www.aloanuncio.com.br</strong> para prosseguir com o atendimento.
+              </p>
+            </div>
+
+            {/* Micro visual loading bar segments */}
+            <div className="mt-6 flex gap-1.5 justify-center">
+              {[1, 2, 3, 4, 5].map((step) => (
+                <div 
+                  key={step} 
+                  className={`h-2 rounded-full transition-all duration-500 ${
+                    6 - step <= countdown 
+                      ? 'w-8 bg-neutral-100' 
+                      : 'w-10 bg-[#b4d423] shadow-xs shadow-brand-lime/25'
+                  }`}
+                />
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-col gap-3">
+              <a
+                href="https://www.aloanuncio.com.br"
+                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-teal to-emerald-700 hover:from-emerald-700 hover:to-brand-teal text-white font-black text-sm py-4 rounded-xl shadow-md transition-all active:scale-98 cursor-pointer"
+              >
+                Ir Agora para Alô Anúncio
+              </a>
+              <button
+                onClick={() => setCountdown(0)}
+                className="text-xs font-bold text-neutral-400 hover:text-neutral-600 transition-colors cursor-pointer outline-none"
+              >
+                Desejo continuar navegando na Arbosat
+              </button>
+            </div>
+
+          </div>
+        </div>
+      )}
+
       {/* 1. Header Bar */}
       <Header isLargeFont={isLargeFont} onToggleLargeFont={() => setIsLargeFont(!isLargeFont)} />
 
