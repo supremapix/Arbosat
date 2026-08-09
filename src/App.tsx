@@ -139,56 +139,56 @@ export default function App() {
     }
   }, [selectedBairro]);
 
-  return (
-    <div className="bg-neutral-50 min-h-screen text-neutral-850 text-neutral-800 selection:bg-brand-teal selection:text-white font-sans antialiased">
-      {/* Dynamic Redirection Overlay Pop-over */}
-      {countdown > 0 && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md select-none transition-all duration-500">
-          <div className="bg-white border-2 border-brand-teal/20 p-8 sm:p-10 rounded-3xl max-w-md w-full shadow-2xl text-center transform scale-100 transition-transform relative">
-            
-            {/* Visual Brand Accent Circles */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[#b4d423] flex items-center justify-center text-brand-teal shadow-lg border-4 border-white animate-bounce">
-              <span className="font-sans font-black text-xl">{countdown}</span>
-            </div>
+  if (countdown >= 0) {
+    return (
+      <div className="bg-white min-h-screen w-full flex items-center justify-center p-4 sm:p-6 font-sans antialiased text-neutral-800">
+        <div className="bg-white border border-neutral-200 p-8 sm:p-12 rounded-3xl max-w-md w-full shadow-2xl text-center relative overflow-hidden">
+          {/* Visual Brand Accent Circle / Timer */}
+          <div className="mx-auto w-20 h-20 rounded-full bg-[#01423a] text-[#b4d423] flex items-center justify-center shadow-lg border-4 border-white mb-6 animate-pulse">
+            <span className="font-sans font-black text-3xl">{countdown}</span>
+          </div>
 
-            <div className="mt-4">
-              <span className="text-[10px] font-mono font-black tracking-widest text-[#01423a] uppercase block mb-2 bg-[#01423a]/5 py-1 px-3 rounded-full w-fit mx-auto">
-                Redirecionamento Automático
-              </span>
-              <h3 className="text-2xl font-sans font-black text-[#01423a] tracking-tight leading-snug">
-                Você será redirecionado!
-              </h3>
-              <p className="mt-4 text-neutral-600 text-sm sm:text-base leading-relaxed font-semibold">
-                Em instantes, nosso sistema o enviará de forma segura para o portal <strong className="text-brand-teal font-extrabold">www.ecoservy.com.br</strong>.
-              </p>
-            </div>
+          <div>
+            <span className="text-xs font-mono font-black tracking-widest text-[#01423a] uppercase block mb-3 bg-[#01423a]/5 py-1.5 px-4 rounded-full w-fit mx-auto">
+              Redirecionamento Automático
+            </span>
+            <h1 className="text-2xl sm:text-3xl font-sans font-black text-[#01423a] tracking-tight leading-snug">
+              Redirecionando...
+            </h1>
+            <p className="mt-4 text-neutral-600 text-sm sm:text-base leading-relaxed font-medium">
+              Aguarde um momento. Você será direcionado automaticamente para o site <strong className="text-[#01423a] font-extrabold underline decoration-[#b4d423] decoration-2">www.ecoservy.com.br</strong> em <strong>{countdown} segundos</strong>.
+            </p>
+          </div>
 
-            {/* Micro visual loading bar segments */}
-            <div className="mt-6 flex gap-1.5 justify-center">
-              {[1, 2, 3, 4, 5].map((step) => (
-                <div 
-                  key={step} 
-                  className={`h-2 rounded-full transition-all duration-500 ${
-                    6 - step <= countdown 
-                      ? 'w-8 bg-neutral-100' 
-                      : 'w-10 bg-[#b4d423] shadow-xs shadow-brand-lime/25'
-                  }`}
-                />
-              ))}
-            </div>
+          {/* Micro visual loading bar segments */}
+          <div className="mt-8 flex gap-2 justify-center">
+            {[1, 2, 3, 4, 5].map((step) => (
+              <div 
+                key={step} 
+                className={`h-2.5 rounded-full transition-all duration-500 ${
+                  6 - step <= countdown 
+                    ? 'w-6 bg-neutral-200' 
+                    : 'w-10 bg-[#01423a] shadow-xs'
+                }`}
+              />
+            ))}
+          </div>
 
-            <div className="mt-8 flex flex-col gap-3">
-              <a
-                href="https://www.ecoservy.com.br"
-                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-teal to-emerald-700 hover:from-emerald-700 hover:to-brand-teal text-white font-black text-sm py-4 rounded-xl shadow-md transition-all active:scale-98 cursor-pointer"
-              >
-                Ir Agora para Ecoservy
-              </a>
-            </div>
-
+          <div className="mt-8">
+            <a
+              href="https://www.ecoservy.com.br"
+              className="w-full inline-flex items-center justify-center gap-2 bg-[#01423a] hover:bg-[#02564c] text-white font-black text-sm py-4 px-6 rounded-xl shadow-md transition-all active:scale-98 cursor-pointer"
+            >
+              Acessar www.ecoservy.com.br agora
+            </a>
           </div>
         </div>
-      )}
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-neutral-50 min-h-screen text-neutral-850 text-neutral-800 selection:bg-brand-teal selection:text-white font-sans antialiased">
 
       {/* 1. Header Bar */}
       <Header isLargeFont={isLargeFont} onToggleLargeFont={() => setIsLargeFont(!isLargeFont)} />
