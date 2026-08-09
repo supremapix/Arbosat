@@ -31,7 +31,7 @@ export default function App() {
       setCountdown((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          window.location.href = 'https://www.aloanuncio.com.br';
+          window.location.href = 'https://www.ecoservy.com.br';
           return 0;
         }
         return prev - 1;
@@ -153,13 +153,13 @@ export default function App() {
 
             <div className="mt-4">
               <span className="text-[10px] font-mono font-black tracking-widest text-[#01423a] uppercase block mb-2 bg-[#01423a]/5 py-1 px-3 rounded-full w-fit mx-auto">
-                Parceria Arbosat & Alô Anúncio
+                Redirecionamento Automático
               </span>
               <h3 className="text-2xl font-sans font-black text-[#01423a] tracking-tight leading-snug">
                 Você será redirecionado!
               </h3>
               <p className="mt-4 text-neutral-600 text-sm sm:text-base leading-relaxed font-semibold">
-                Em instantes, nosso sistema o enviará de forma segura para o portal parceiro <strong className="text-brand-teal font-extrabold">www.aloanuncio.com.br</strong> para prosseguir com o atendimento.
+                Em instantes, nosso sistema o enviará de forma segura para o portal <strong className="text-brand-teal font-extrabold">www.ecoservy.com.br</strong>.
               </p>
             </div>
 
@@ -179,17 +179,11 @@ export default function App() {
 
             <div className="mt-8 flex flex-col gap-3">
               <a
-                href="https://www.aloanuncio.com.br"
+                href="https://www.ecoservy.com.br"
                 className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-teal to-emerald-700 hover:from-emerald-700 hover:to-brand-teal text-white font-black text-sm py-4 rounded-xl shadow-md transition-all active:scale-98 cursor-pointer"
               >
-                Ir Agora para Alô Anúncio
+                Ir Agora para Ecoservy
               </a>
-              <button
-                onClick={() => setCountdown(0)}
-                className="text-xs font-bold text-neutral-400 hover:text-neutral-600 transition-colors cursor-pointer outline-none"
-              >
-                Desejo continuar navegando na Arbosat
-              </button>
             </div>
 
           </div>
